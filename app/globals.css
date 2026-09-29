@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    background: theme("colors.ground");
+  }
+  body {
+    @apply bg-ground font-sans text-ink antialiased;
+  }
+}
+
+@layer components {
+  /* Hidden until the GSAP intro reveals them (avoids a flash before hydration). */
+  [data-letter],
+  [data-stat],
+  [data-car-body],
+  [data-trail] {
+    visibility: hidden;
+  }
+}
